@@ -1,0 +1,36 @@
+.movieRow{
+    margin-bottom: 30px;
+}
+
+.movieRow h2{
+    margin: 0px 0px 0px 30px;
+}
+
+.movieRow--listarea{
+    /* tudo que passar da tela na horizontal vai ser cortado */
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+
+.movieRow--list{
+    width: 99999999999px;
+}
+
+.movieRow--item{
+    /* faz o item ficar um do lado do outro */
+    display: inline-block;
+    width: 150px;
+    cursor: pointer;
+}
+
+.movieRow--item img{
+    width: 100%;
+    /* aqui a imagem vai ter 100% do tamanho dela, mas o css é diminiuido para ficar com 90% do tamanho */
+    transform: scale(0.9); 
+    transition: all ease 0.2s;
+}
+
+.movieRow--item img:hover{
+    /* ao passar o mouse o css deixa a imagem em 100% do tamanho dela, ou seja, 150px */
+    transform: scale(1);
+}
