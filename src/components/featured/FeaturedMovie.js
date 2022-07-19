@@ -22,12 +22,12 @@ export default ({item}) => {
                         <div className="featured--points">{item.vote_average} pontos</div>
                         <div className="featured--year">{firstDate.getFullYear()}</div>
                         {/* pega o numero de temporadas e faz uma condicional para o 's' aparecer se tiver mais de uma temporada  */}
-                        <div className="fetured--seasons">{item.number_of_seasons} temporada{item.number_of_seasons !== 1 ? 's' : ''}</div>
+                        <div className="featured--seasons">{item.number_of_seasons} temporada{item.number_of_seasons !== 1 ? 's' : ''}</div>
                     </div>
                     <div className="featured--description">{item.overview}</div>
                     <div className="featured--buttons">
-                        <a href={`/watch/${item.id}`}>► Assistir</a>
-                        <a href={`/list/${item.id}`}>+ Minha Lista</a>
+                        <a className="featured--watchbutton" href={`/watch/${item.id}`}>► Assistir</a>
+                        <a className="featured--mylistbutton" href={`/list/${item.id}`}>+ Minha Lista</a>
                     </div>
                     <div className="featured--genres"><strong>Gêneros:</strong> {genres.join(', ')}</div>
                 </div>
