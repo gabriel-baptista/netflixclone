@@ -9,6 +9,7 @@ export default ({item}) => {
         genres.push(item.genres[i].name);
     }
 
+    // cortando o tamanho da descrição do filme se tiver mais de 200 caracteres
     let description = item.overview;
     if(description.length > 200){
         description = description.substring(0, 200)+'...';
