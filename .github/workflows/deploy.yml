@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Basic settings
-      run: |
-          apt-get install curl -y
-          apt-get install git -y
-          apt-get install unzip -y
-          apt-get install zip -y
-          apt-get install xz-utils
+#     - uses: actions/checkout@v2
+#     - name: Basic settings
+#       run: |
+#           apt-get install curl -y
+#           apt-get install git -y
+#           apt-get install unzip -y
+#           apt-get install zip -y
+#           apt-get install xz-utils
     
     - name: Install dependencies
       run: npm install
