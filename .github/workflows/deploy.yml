@@ -49,6 +49,6 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         rm: true
         strip_components: 3
-        source: "/build"
+        source: "/"
         target: "/var/docker/volumes/netflixclone"
         
