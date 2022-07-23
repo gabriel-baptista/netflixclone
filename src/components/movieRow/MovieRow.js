@@ -3,7 +3,7 @@ import './MovieRow.css'
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
-export default ({title, items}) => {
+const MovieRow =  ({title, items}) => {
 
     // tratando como vai funcionar o botao de back e next nas listas de filmes
     const [scrollX, setScrollX] = useState(-400);
@@ -56,3 +56,5 @@ export default ({title, items}) => {
         </div>
     );
 }
+
+export default MovieRow;
