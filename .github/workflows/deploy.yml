@@ -10,8 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Basic settings
     - uses: actions/checkout@v2
+    - name: Basic settings
+      run: |
+        apt update 
+        apt upgrade
     
     - name: Install dependencies
       run: npm install
