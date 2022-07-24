@@ -50,5 +50,5 @@ jobs:
         rm: true
 #         strip_components: 3
         source: "./"
-        target: "/var/docker/volumes/netflixclone"
+        target: "/var/lib/docker/volumes/netflixclone"
         
