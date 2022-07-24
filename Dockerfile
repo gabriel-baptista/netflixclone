@@ -1,17 +1,16 @@
-# Imagem de Origem
-FROM node:current-alpine
+FROM node:alpine
 
-# Diretório de trabalho(é onde a aplicação ficará dentro do container).
-WORKDIR /app
+# seta o diretorio que vai usar
+WORKDIR /usr/app
 
-# Adicionando `/app/node_modules/.bin` para o $PATH
-ENV PATH /app/node_modules/.bin:$PATH
+# copia todos os arquivos com o nome package e que seja json
+COPY package*.json ./
+RUN npm install
 
-# Instalando dependências da aplicação e armazenando em cache.
-COPY package.json /app/package.json
-RUN npm install 
-RUN npm install @mui/material @emotion/react @emotion/styled
-RUN npm install @mui/icons-material
+# copia o restante dos arquivos
+COPY . .
+RUN npm run build
 
-# Inicializa a aplicação
-CMD ["npm", "start"]
+EXPOSE 3000
+
+CMD [ "npm", "start" ]
